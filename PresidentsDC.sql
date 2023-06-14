@@ -69,17 +69,6 @@ from PresidentsData
 UPDATE PresidentsData
 SET 
     vice = TRIM(vice)
--- 
-
-/* since 'TRIM' only removes leading & trailing spaces, we will need to remove additional spaces within the strings
-select vice, replace(vice, '  ','')
-from PresidentsData
-where vice like '%    %'
-
-
-select vice, replace(vice, '   ',' ') as vice_Fixed
-from PresidentsData
-*/
 
 -- We've identified that column 'prior' will not be utilized in our dataset, so we can remove it
 ALTER TABLE PresidentsData
